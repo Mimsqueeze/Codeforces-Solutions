@@ -2,7 +2,7 @@
  * Name: Minsi Hu
  * Date:
  * Problem: 158B
- * Difficulty Rating: 800
+ * Difficulty Rating: 1100
  * Start Time:
  * End Time:
  */
