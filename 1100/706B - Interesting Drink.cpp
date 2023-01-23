@@ -34,8 +34,7 @@ int main() {
     for (int j = 0; j < q; j++) {
         int m;
         cin >> m;
-        int index = binarySearch(prices, 0, n-1, m) + 1;
-        cout << index << "\n";
+        cout << binarySearch(prices, 0, n-1, m) + 1 << "\n";
     }
 }
 
