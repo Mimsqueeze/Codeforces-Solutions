@@ -4,7 +4,7 @@
  * Problem: 492B
  * Difficulty Rating: 1200
  * Start Time: 8:00PM
- * End Time:
+ * End Time: 10:28PM
  */
 
 #include <iostream>
