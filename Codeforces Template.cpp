@@ -1,15 +1,18 @@
 /*
  * Name: Minsi Hu
- * Date: 1/20/23
+ * Date: X/XX/23
  * Problem:
  * Difficulty Rating:
  * Start Time:
  * End Time:
  */
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
 
 }
