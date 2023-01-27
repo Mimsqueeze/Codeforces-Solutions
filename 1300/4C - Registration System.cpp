@@ -21,11 +21,12 @@ int main() {
         cin >> username;
         if (registrar.find(username) == registrar.end()) { // not in map
             registrar[username] = 1;
-            cout << "OK" << endl;
+            cout << "OK\n";
         } else { // in map
-            cout << username + to_string(registrar[username]) << endl;
+            cout << username << registrar[username] << "\n";
             registrar[username]++;
         }
     }
     return 0;
+
 }
