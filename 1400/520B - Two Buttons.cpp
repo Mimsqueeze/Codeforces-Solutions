@@ -18,7 +18,7 @@ int main() {
     cin >> n >> m;
 
     int buttonPresses = 0;
-    if (n > m) { // if n is greater, then the answer is the difference
+    if (n >= m) { // if n is greater, then the answer is the difference
         cout << n - m;
         exit(0);
     }
@@ -29,14 +29,10 @@ int main() {
             a *= 2; // multiply by 2
             b *= 2; // multiply by 2
         }
-        if (a >= m && b < m) { // path A is better
+        if (a >= m && b < m) // path A is better
             n *= 2;
-        } else { // both are greater
-            if ((a - m < b - m)) // path A is better
-                n *= 2;
-            else // path b is better
-                n--;
-        }
+        else // both are greater so b is better
+            n--;
         buttonPresses++;
     }
     buttonPresses += n - m;
