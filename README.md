@@ -1,2 +1,2 @@
 # Codeforces-Solutions
-My Codeforces solutions just for reference :)
+My Codeforces solutions for reference
