@@ -4,13 +4,35 @@
  * Problem: 445A
  * Difficulty Rating: 1500
  * Start Time: 3:30PM
- * End Time:
+ * End Time: 10:38AM 2/4/23
  */
 
 #include <bits/stdc++.h>
 
 using namespace std;
 
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int n, m;
+    cin >> n >> m;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            char c;
+            cin >> c;
+            c = (c == '.' ? ((i+j) % 2 ? 'W' : 'B') : '-');
+            cout << c;
+        }
+        cout << "\n";
+    }
+
+    return 0;
+}
+
+// I went the complete wrong track here, haha. I overthought it like crazy so thanks to Gary for the hint.
+/*
 struct piece {
     int p;
     char color;
@@ -64,6 +86,7 @@ int main() {
     list<piece> dfs{};
 
     char board[_size+1];
+
     for (int i = 1; i < _size+1; i++) {
         char cell;
         cin >> cell;
@@ -99,3 +122,4 @@ int main() {
 
     return 0;
 }
+*/
