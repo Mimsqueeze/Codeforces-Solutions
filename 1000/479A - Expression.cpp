@@ -3,8 +3,8 @@
  * Date: 2/20/23
  * Problem: 479A
  * Difficulty Rating: 1000
- * Start Time:
- * End Time:
+ * Start Time: 10:30
+ * End Time: 11:00
  */
 
 #include <bits/stdc++.h>
