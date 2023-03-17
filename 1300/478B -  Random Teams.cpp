@@ -4,7 +4,7 @@
  * Problem: 478B
  * Difficulty Rating: 1300
  * Start Time: 12:10PM
- * End Time:
+ * End Time: 12:46pm
  */
 
 #include <bits/stdc++.h>
