@@ -4,7 +4,7 @@
  * Problem: 455A
  * Difficulty Rating: 1500
  * Start Time: 10:57PM
- * End Time:
+ * End Time: 12:15AM
  */
 
 #include <bits/stdc++.h>
@@ -15,14 +15,14 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    unsigned short n; // number of numbers
+    unsigned int n; // number of numbers
     cin >> n;
 
-    unsigned long long arr[10001]{0}; // array to store occurences of numbers
-    unsigned long long dp[10004]{0}; // array to track dp array
-    unsigned short largest= 0; // largest number to optimize processing
+    unsigned long long arr[100001]{0}; // array to store occurences of numbers
+    unsigned long long dp[100004]{0}; // array to track dp array
+    unsigned int largest= 0; // largest number to optimize processing
 
-    unsigned short a; // temporary variable to store a number
+    unsigned int a; // temporary variable to store a number
     while (n--) {
         cin >> a;
         arr[a]++;
@@ -37,11 +37,11 @@ int main() {
     cout << "\n";
     */
 
-    for (unsigned short i= 1; i <= largest; i++) // process arr so that each element holds the number of points it will give
+    for (unsigned int i= 1; i <= largest; i++) // process arr so that each element holds the number of points it will give
         arr[i]= i * arr[i];
 
     unsigned long long v; // temporary variable to store a number
-    for (unsigned short i= 1; i <= largest; i++) { // process dp
+    for (unsigned int i= 1; i <= largest; i++) { // process dp
         v= dp[i] + arr[i];
         dp[i]= v;
         if (dp[i+2] < v)
