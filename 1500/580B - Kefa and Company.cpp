@@ -13,26 +13,29 @@
 #define all(a) (a).begin(), (a).end()
 using namespace std;
 
-bool sortbymoney(const pair<int,int> &a, const pair<int,int> &b) {
-    return (a.first < b.first); // sorts based on money
+typedef struct Friend {
+    int m, f;
+};
+
+bool sortbymoney(Friend &a, Friend &b) {
+    return (a.m < b.m); // sorts based on money
 }
 
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
 
-    int n, i, d;
+    int n, d;
     cin >> n >> d;
-    i= n;
 
-    vector<pair<int,int>> vect;
-    while (i--) {
-        int m, f;
-        cin >> m >> f;
-        vect.push_back(make_pair(m, f));
+    Friend arr[n];
+    for (int i= 0; i < n; i++) {
+        Friend aFriend;
+        cin >> aFriend.m >> aFriend.f;
+        arr[i]= aFriend;
     }
 
-    sort(vect.begin(), vect.end(), sortbymoney);
+    sort(arr, arr + n, sortbymoney);
 
 #if 0
     // Debugging
@@ -42,18 +45,11 @@ int main() {
     }
 #endif
 
-    int m[n], f[n];
-    i= 0;
-    for (auto iter = vect.begin(); iter < vect.end(); i++, iter++){
-        m[i]= iter -> first;
-        f[i]= iter -> second;
-    }
-
     int l= 0, r= 0;
     ll largest= -1, friendship= 0;
     while (r < n) {
-        while (m[r] - m[l] < d && r < n) {
-            friendship += f[r++];
+        while (arr[r].m - arr[l].m < d && r < n) {
+            friendship += arr[r++].f;
         }
 #if 0
         // debugging
@@ -61,7 +57,7 @@ int main() {
 #endif
         if (friendship > largest)
             largest= friendship;
-        friendship -= f[l++];
+        friendship -= arr[l++].f;
     }
 
     cout << largest;
