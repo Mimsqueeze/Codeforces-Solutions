@@ -6,7 +6,7 @@
 - To convert entire string to uppercase or lowercase, use:
   - transform(s1.begin(), s1.end(), s1.begin(), ::toupper); or
   - transform(s1.begin(), s1.end(), s1.begin(), ::tolower);
-- 
+- to_string(int) converts an int to a string
 
 # Sorting
 - Pair are sorted by their first elements, then by their second element by default
@@ -30,6 +30,11 @@
   equal_range returns both above pointers (returns a pair where first is lower bound, second is upper bound)
 
 # Data Structures
+### Array
+- int arr[size];
+- Must initialize values of array before use
+- int arr[size]= {}; initializes the array with all 0's
+
 ### Dynamic Array (vector and string)
 - vector<int> v;
 - vector<int> v(10); initializes a vector of size 10
