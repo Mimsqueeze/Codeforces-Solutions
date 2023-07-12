@@ -1,4 +1,13 @@
 #include <bits/stdc++.h>
+#include <cstring>
+#include <cmath>
+#define     ll              long long
+#define     ull             unsigned long long
+#define     max2(a,b)       max(a,b)
+#define     max3(a,b,c)     max(a,max(b,c))
+#define     min2(a,b)       min(a,b)
+#define     min3(a,b,c)     min(a,min(b,c))
+
 using namespace std;
 
 void solve() {
