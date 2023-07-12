@@ -34,8 +34,9 @@
 - vector<int> v;
 - vector<int> v(10); initializes a vector of size 10
 - vector<int> v(10, 5); initializes a vector of size 10 with initial values 5
-- vector<int> v(arr, arr + n); initializes a vector from an array
-  vector<int> v(v.begin(), v.end()); initializes a vector from another vector
+- vector<int> v(arr, arr + n); initializes a vector from an array 
+- vector<int> v(v.begin(), v.end()); initializes a vector from another vector
+- Must specify size of array before using it lmao
 - vector.size() gives number of elements
 - vector.back() returns last element in vector
 - vector.push_back() adds the last element
