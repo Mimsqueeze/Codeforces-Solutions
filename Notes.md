@@ -9,10 +9,13 @@
 - to_string(int) converts an int to a string
 
 # Sorting
-- Pair are sorted by their first elements, then by their second element by default
+- Pairs are sorted by their first elements, then by their second element by default
+- make_pair(u, v) can be used to make a pair
 - Struct comparison operator needs to be defined as function operator<, which should return true if the element is
   smaller than the parameter, and false otherwise. Ex. bool operator<(const STRUCTURE &p)
 - Possible to give external comparison function to the sort function. Ex. bool compare(TYPE a, TYPE b)
+- Lambda function: [](parameter-list) -> return-value { function-body };
+- Ex. [](int a, int b) -> bool {return a > b;} // will sort the array in reverse increasing order
 
 ### sort(vector.begin(), vector.end());
 - Sorts a vector
