@@ -7,6 +7,10 @@
   - transform(s1.begin(), s1.end(), s1.begin(), ::toupper); or
   - transform(s1.begin(), s1.end(), s1.begin(), ::tolower);
 - to_string(int) converts an int to a string
+- string.compare() function compares two strings
+  - Ex. a.compare(b)
+  - Returns 0 if strings are the same, <0 if a is smaller, >0 if a is larger
+- 
 
 # Sorting
 - Pairs are sorted by their first elements, then by their second element by default
@@ -28,9 +32,14 @@
 
 ### lower_bound(array, array+n, x);
 - Returns a pointer to the first element whose value is at least x
-  upper_bound(array, array+n, x);
-- Returns a pointer to the first element whose value is larger than x
-  equal_range returns both above pointers (returns a pair where first is lower bound, second is upper bound)
+- Subtracting one yields last element whose value is less than x
+
+### upper_bound(array, array+n, x);
+- Returns a pointer to the first element whose value is larger than x 
+- Subtracting one yields last element whose value is equal to x
+
+### equal_range(array, array+n, x);
+- returns both above pointers (returns a pair where first is lower bound, second is upper bound)
 
 # Data Structures
 ### Array
@@ -81,6 +90,7 @@
 
 ### Bitset
 - Array whose value is either 0 or 1
+- Can only initialize with constant size
 - bitset<10> bs(string("1001011100"); initializes the bitset from right to left
 - bitset.count() returns the number of ones in the bitset
 - bit operations can be done on entire bitsets ex. a&b, a|b, a^b
