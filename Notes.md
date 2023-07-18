@@ -10,7 +10,9 @@
 - string.compare() function compares two strings
   - Ex. a.compare(b)
   - Returns 0 if strings are the same, <0 if a is smaller, >0 if a is larger
-- 
+- string.erase(pos, n) removes n characters starting at position pos
+- string.replace(pos, n, s) replaces n characters starting at position pos with string s
+- string.find(s, pos) returns position of s inside of string after position pos, -1 if not found
 
 # Sorting
 - Pairs are sorted by their first elements, then by their second element by default
