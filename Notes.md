@@ -44,6 +44,11 @@
 - returns both above pointers (returns a pair where first is lower bound, second is upper bound)
 
 # Data Structures
+
+## General notes:
+- By default, STL containers are pass by value, meaning a copy of the container is passed into a function
+- To pass STL containers through functions by reference, include the &
+
 ### Array
 - int arr[size];
 - Must initialize values of array before use
