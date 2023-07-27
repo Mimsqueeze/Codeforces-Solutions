@@ -1,4 +1,13 @@
-# Strings
+# Competitive Programming Notes
+
+## General notes:
+- By default, STL containers are pass by value, meaning a copy of the container is passed into a function
+- To pass STL containers through functions by reference, include the &
+- Use long long if doing arithmetic
+- Memory is actually pretty important, do O(1) if you can instead of O(n)
+- " \n"[i == n - 1] evals to " " when i != n-1, and "\n" when i == n-1
+- 
+## Strings
 - Uppercase ascii values are from 65 to 90 inclusive
 - Lowercase ascii values are from 97 to 122 inclusive
 - To convert from lowercase to uppercase, subtract 32
@@ -14,23 +23,38 @@
 - string.replace(pos, n, s) replaces n characters starting at position pos with string s
 - string.find(s, pos) returns position of s inside of string after position pos, -1 if not found
 
+## Lambda functions
+[ capture clause ] (parameters) -> return-type  
+{   
+  function-body
+}
+- Capture clause of & allows function to modify variables from surrounding scope
+
 # Sorting
 - Pairs are sorted by their first elements, then by their second element by default
 - make_pair(u, v) can be used to make a pair
 - Struct comparison operator needs to be defined as function operator<, which should return true if the element is
   smaller than the parameter, and false otherwise. Ex. bool operator<(const STRUCTURE &p)
 - Possible to give external comparison function to the sort function. Ex. bool compare(TYPE a, TYPE b)
-- Lambda function: [](parameter-list) -> return-value { function-body };
+- Lambda function: [](parameter-list) -> return-type { function-body };
 - Ex. [](int a, int b) -> bool {return a > b;} // will sort the array in reverse increasing order
+- Note, comparator functions return TRUE if FIRST argument is LESS than the SECOND argument
 
-### sort(vector.begin(), vector.end());
-- Sorts a vector
-  sort(array, array+n);
-- Sorts an array
-  sort(string.begin(), string.end());
-- Sorts a string
+- Sort a vector:
+  - sort(vector.begin(), vector.end());
+- Sort an array:
+  - sort(array, array+n);
+- Sort a string:
+  - sort(string.begin(), string.end());
+- Sort with comparison function:
   sort(vector.begin(), vector.end(), compare());
-- Using sort() with an external comparison function
+- Sort with lambda comparison function:
+    sort(vector.begin(), vector.end(), 
+      [&](int i, int j) {
+      return (a[i] - 1) % k > (a[j] - 1) % k;
+    });
+      );
+- Use stable_sort() if you need to preserve order, applies when there are elements of equal value
 
 ### lower_bound(array, array+n, x);
 - Returns a pointer to the first element whose value is at least x
@@ -44,10 +68,6 @@
 - returns both above pointers (returns a pair where first is lower bound, second is upper bound)
 
 # Data Structures
-
-## General notes:
-- By default, STL containers are pass by value, meaning a copy of the container is passed into a function
-- To pass STL containers through functions by reference, include the &
 
 ### Array
 - int arr[size];
@@ -126,4 +146,11 @@
 - queue.push() adds an element into the heap
 - queue.front() returns the largest element
 - queue.pop() removes the largest element
+- Can make a custom priority queue by passing in comparison function:
+  - auto compare(T lower_priority, T higher_priority);
+  - priority_queue<T, vector<T>, decltype(compare)> q(compare);
 
+# Useful functions
+- iota(v.begin(), v.end(), 0);
+  - Fills a vector with values from 1 to n-1
+- 
