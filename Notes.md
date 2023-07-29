@@ -150,6 +150,18 @@
   - auto compare(T lower_priority, T higher_priority);
   - priority_queue<T, vector<T>, decltype(compare)> q(compare);
 
+# Bit operations
+- And operator: &
+- Or operator: |
+- Xor operator: ^
+- Not operator: ~
+- Bit shifts: x << k shift left by k, x >> k shift right by k
+- __builtin_clz(x): the number of zeros at the beginning of the number
+- __builtin_ctz(x): the number of zeros at the end of the number
+- __builtin_popcount(x): the number of ones in the number
+- __builtin_parity(x): the parity (even or odd) of the number of ones
+- Convenient for representing sets
+
 # Useful functions
 - iota(v.begin(), v.end(), 0);
   - Fills a vector with values from 1 to n-1
