@@ -146,6 +146,7 @@
 - queue.push() adds an element into the heap
 - queue.front() returns the largest element
 - queue.pop() removes the largest element
+- priority_queue<int, vector<int>, greater<int>> makes a minimum priority queue
 - Can make a custom priority queue by passing in comparison function:
   - auto compare(T lower_priority, T higher_priority);
   - priority_queue<T, vector<T>, decltype(compare)> q(compare);
