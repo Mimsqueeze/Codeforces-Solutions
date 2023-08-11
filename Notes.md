@@ -22,6 +22,7 @@
 - string.erase(pos, n) removes n characters starting at position pos
 - string.replace(pos, n, s) replaces n characters starting at position pos with string s
 - string.find(s, pos) returns position of s inside of string after position pos, -1 if not found
+- reverse(s.begin(), s.end()) reverses the string
 
 ## Lambda functions
 [ capture clause ] (parameters) -> return-type  
@@ -49,11 +50,7 @@
 - Sort with comparison function:
   sort(vector.begin(), vector.end(), compare());
 - Sort with lambda comparison function:
-    sort(vector.begin(), vector.end(), 
-      [&](int i, int j) {
-      return (a[i] - 1) % k > (a[j] - 1) % k;
-    });
-      );
+    - sort(vector.begin(), vector.end(), [&](int i, int j) { return (a[i] - 1) % k > (a[j] - 1) % k; });
 - Use stable_sort() if you need to preserve order, applies when there are elements of equal value
 
 ### lower_bound(array, array+n, x);
@@ -166,4 +163,26 @@
 # Useful functions
 - iota(v.begin(), v.end(), 0);
   - Fills a vector with values from 1 to n-1
-- 
+
+# Graph Algorithms
+- Note n denotes number of vertices, m denotes number of edges
+
+## Shortest paths
+### Bellman-Ford algorithm
+- For n-1 rounds, go through all m edges of the graph and try to reduce the distances
+- Can detect negative cycles on nth round, if distance is further reduced
+- SPFA algorithm is a variant where a queue of nodes is maintained
+  - WHen an edge a -> b reduces a distance, node b is added to the queue]
+- O(n*m)
+
+### Dijkstra's algorithm
+- For each round, process a node that has not been processed yet and has minimum distance
+- Priority queue is useful for implementing this
+- Cannot be used for negative weight edges
+- O(n + mlog(n)) with priority queue
+
+## Floyd-Warshall algorithm
+- Finds shortest paths between all nodes in a single run
+- Maintains a two-dimensional array that contains distances between the nodes
+- First calculates distances with direct edges, then reduces distances by using intermediate nodes
+- O(n^3)
