@@ -84,6 +84,12 @@
 - vector.pop_back() removes the last element
 - string.substr(k, x) returns the substring that begins at position k for length x
 
+### List (linkedlist)
+- list<int> l;
+- Uses iterator to traverse:
+  - auto it= l.begin();
+  - it++; to advance
+
 ### Sets (set and unordered_set)
 - set<int> s;
 - set<int> s(arr, arr + n); initializes a set from an array
