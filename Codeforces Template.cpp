@@ -6,13 +6,7 @@
 using namespace std;
 
 void solve() {
-    ifstream cin(".in");
-    ofstream cout(".out");
 
-
-
-    cin.close();
-    cout.close();
 }
 
 signed main() {
@@ -26,3 +20,4 @@ signed main() {
 
     return 0;
 }
+

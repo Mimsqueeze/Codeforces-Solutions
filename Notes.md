@@ -82,7 +82,7 @@
 - vector.back() returns last element in vector
 - vector.push_back() adds the last element
 - vector.pop_back() removes the last element
-- string.substr(k, x) returns the substring that begins at position k for length x
+  - string.substr(k, x) returns the substring that begins at position k for length x
 
 ### List (linkedlist)
 - list<int> l;

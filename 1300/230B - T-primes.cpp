@@ -19,7 +19,7 @@ bool isTPrime (long long int &x) {
     // now find if square root of x is prime
     long double a = sqrt(x);
 
-    // if it is not a perfect square, no chance of being prime
+    // if it is not a perfect square, no chance of being t prime
     if (trunc(a) != a)
         return false;
 
