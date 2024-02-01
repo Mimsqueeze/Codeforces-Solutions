@@ -22,6 +22,7 @@
 - string.erase(pos, n) removes n characters starting at position pos
 - string.replace(pos, n, s) replaces n characters starting at position pos with string s
 - string.find(s, pos) returns position of s inside of string after position pos, -1 if not found
+- string.substr(k, x) returns the substring that begins at position k for length x
 - reverse(s.begin(), s.end()) reverses the string
 
 ## Lambda functions
@@ -82,7 +83,6 @@
 - vector.back() returns last element in vector
 - vector.push_back() adds the last element
 - vector.pop_back() removes the last element
-  - string.substr(k, x) returns the substring that begins at position k for length x
 
 ### List (linkedlist)
 - list<int> l;
@@ -147,8 +147,9 @@
 - A queue implemented with a max heap where popping it removes the largest element
 - priority_queue<int> q;
 - queue.push() adds an element into the heap
-- queue.front() returns the largest element
+- queue.top() returns the largest element
 - queue.pop() removes the largest element
+- queue.empty() tells you if the queue is empty
 - priority_queue<int, vector<int>, greater<int>> makes a minimum priority queue
 - Can make a custom priority queue by passing in comparison function:
   - auto compare(T lower_priority, T higher_priority);
